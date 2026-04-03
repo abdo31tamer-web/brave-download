@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="./0.png">
+    <title>Brave - تنزيل المتصفح</title>
+    
+    <!-- خطوط عربية فائقة الفخامة -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;800&family=Tajawal:wght@700;900&display=swap" rel="stylesheet">
+    
+    <!-- الأيقونات -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* لوحة الألوان السينمائية */
+        :root {
+            --brave-core: #ff5000;
+            --brave-glow: #ff004f; /* لون يضيف فخامة للبرتقالي */
+            --glass-bg: rgba(10, 10, 12, 0.5);
+            --glass-border: rgba(255, 255, 255, 0.08);
+            --text-pure: #ffffff;
+            --text-silver: #a1a1aa;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Cairo', sans-serif;
+        }
+
+        /* خلفية الأورورا السائلة (السحر الحقيقي) */
+        body {
+            background-color: #000000;
+            color: var(--text-pure);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* الإضاءات السائلة في الخلفية */
+        .aurora-1, .aurora-2, .aurora-3 {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(90px);
+            opacity: 0.6;
+            animation: liquid-flow 15s infinite alternate ease-in-out;
+            z-index: 0;
+        }
+
+        .aurora-1 {
+            background: var(--brave-core);
+            width: 500px; height: 500px;
+            top: -10%; left: -10%;
+            animation-delay: 0s;
+        }
+
+        .aurora-2 {
+            background: var(--brave-glow);
+            width: 400px; height: 400px;
+            bottom: -10%; right: -10%;
+            animation-delay: -5s;
+        }
+
+        .aurora-3 {
+            background: #2a00ff;
+            width: 600px; height: 600px;
+            top: 40%; left: 40%;
+            opacity: 0.3;
+            animation-delay: -10s;
+        }
+
+        @keyframes liquid-flow {
+            0% { transform: translate(0, 0) scale(1); }
+            50% { transform: translate(100px, 50px) scale(1.2); }
+            100% { transform: translate(-50px, 100px) scale(0.9); }
+        }
+
+        /* شبكة رقيقة جداً فوق الخلفية لإعطاء ملمس احترافي (Noise/Mesh) */
+        body::after {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background-image: radial-gradient(rgba(255,255,255,0.03) 1px, transparent 1px);
+            background-size: 30px 30px;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        /* البطاقة الرئيسية (زجاج الأوبسيديان الفاخر) */
+        .masterpiece-card {
+            background: var(--glass-bg);
+            backdrop-filter: blur(40px) saturate(150%);
+            -webkit-backdrop-filter: blur(40px) saturate(150%);
+            border: 1px solid var(--glass-border);
+            border-top: 1px solid rgba(255, 255, 255, 0.2); /* لمعة علوية */
+            border-radius: 32px;
+            width: 90%;
+            max-width: 550px;
+            padding: 50px 40px;
+            text-align: center;
+            position: relative;
+            z-index: 10;
+            box-shadow: 
+                0 50px 100px rgba(0, 0, 0, 0.8),
+                inset 0 0 0 1px rgba(255, 255, 255, 0.02);
+        }
+
+        /* هالة ضوئية خلف الشعار */
+        .logo-container {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 25px;
+        }
+
+        .logo-container::before {
+            content: '';
+            position: absolute;
+            top: 50%; left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100px; height: 100px;
+            background: radial-gradient(circle, var(--brave-core) 0%, transparent 70%);
+            filter: blur(20px);
+            opacity: 0.5;
+            animation: pulse-aura 3s infinite alternate;
+            z-index: -1;
+        }
+
+        @keyframes pulse-aura {
+            0% { transform: translate(-50%, -50%) scale(0.8); opacity: 0.3; }
+            100% { transform: translate(-50%, -50%) scale(1.2); opacity: 0.7; }
+        }
+
+        header img {
+            width: 75px;
+            filter: drop-shadow(0 10px 20px rgba(0,0,0,0.5));
+            animation: levitate 4s ease-in-out infinite;
+        }
+
+        @keyframes levitate {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        header h1 {
+            font-family: 'Tajawal', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 900;
+            background: linear-gradient(180deg, #ffffff 0%, #a1a1aa 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: 1px;
+            margin-top: -10px;
+        }
+
+        /* تنسيقات نصوصك الأصلية بفخامة */
+        h2 {
+            font-family: 'Tajawal', sans-serif;
+            font-size: 1.6rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--brave-core), var(--brave-glow));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 20px;
+            text-shadow: 0 2px 10px rgba(255, 80, 0, 0.2);
+        }
+
+        p {
+            color: var(--text-silver);
+            font-size: 1.15rem;
+            line-height: 1.8;
+            margin-bottom: 18px;
+            font-weight: 600;
+        }
+
+        p strong {
+            color: var(--text-pure);
+            font-weight: 800;
+            text-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+        }
+
+        /* الأزرار السينمائية الخارقة */
+        .btn-wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            margin-top: 35px;
+        }
+
+        .btn {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            background: rgba(255, 255, 255, 0.03);
+            color: var(--text-pure);
+            text-decoration: none;
+            padding: 16px 24px;
+            border-radius: 18px;
+            font-size: 1.2rem;
+            font-weight: 800;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            overflow: hidden;
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            z-index: 1;
+        }
+
+        /* لمعان يتحرك داخل الزر (Shimmer Effect) */
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0; left: -100%;
+            width: 50%; height: 100%;
+            background: linear-gradient(to right, transparent, rgba(255,255,255,0.1), transparent);
+            transform: skewX(-20deg);
+            transition: 0.5s;
+            z-index: -1;
+        }
+
+        .btn:hover::before {
+            left: 150%;
+        }
+
+        .btn:hover {
+            background: rgba(255, 255, 255, 0.08);
+            border-color: rgba(255, 255, 255, 0.3);
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        /* زر التحميل الرئيسي (الجوهرة البرتقالية) */
+        .btn-supreme {
+            background: linear-gradient(135deg, var(--brave-core), var(--brave-glow));
+            border: none;
+            box-shadow: 0 10px 30px rgba(255, 80, 0, 0.4);
+        }
+
+        .btn-supreme:hover {
+            background: linear-gradient(135deg, #ff6a00, #ff1a66);
+            box-shadow: 0 15px 40px rgba(255, 80, 0, 0.6);
+            color: #fff;
+        }
+
+        .btn i {
+            font-size: 1.4rem;
+        }
+
+        /* زر الرجوع الفاخر */
+        .btn-back-luxury {
+            position: absolute;
+            top: 25px;
+            right: 25px;
+            background: rgba(0, 0, 0, 0.3);
+            color: var(--text-silver);
+            text-decoration: none;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 1rem;
+            font-weight: 700;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+            z-index: 20;
+        }
+
+        .btn-back-luxury:hover {
+            color: var(--text-pure);
+            background: rgba(255, 255, 255, 0.1);
+            border-color: rgba(255, 255, 255, 0.2);
+            transform: translateX(-4px);
+        }
+
+        /* ================= دخول سينمائي للصفحات (Cinematic Focus Reveal) ================= */
+        .page-section {
+            display: none;
+        }
+
+        .active-page {
+            display: block;
+        }
+
+        /* العناصر تظهر بالتدريج وتفك التغبيش (Blur to Focus) */
+        .active-page header {
+            animation: cinematicReveal 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+        .active-page .content-wrapper {
+            opacity: 0;
+            animation: cinematicReveal 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.15s forwards;
+        }
+        .active-page .btn-wrapper {
+            opacity: 0;
+            animation: cinematicReveal 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.3s forwards;
+        }
+
+        @keyframes cinematicReveal {
+            0% { 
+                opacity: 0; 
+                transform: translateY(30px) scale(0.95);
+                filter: blur(10px);
+            }
+            100% { 
+                opacity: 1; 
+                transform: translateY(0) scale(1);
+                filter: blur(0);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- الأضواء السائلة في الخلفية -->
+    <div class="aurora-1"></div>
+    <div class="aurora-2"></div>
+    <div class="aurora-3"></div>
+
+    <div class="masterpiece-card">
+        
+        <!-- ================= الصفحة الأولى ================= -->
+        <div id="page_1" class="page-section active-page">
+            <header>
+                <div class="logo-container">
+                    <img src="./0.png" alt="شعار Brave">
+                </div>
+                <h1>Brave</h1>
+            </header>
+            <div class="content-wrapper">
+                <!-- نصك الأصلي بالظبط مفيش حرف اتغير -->
+                <h2>هل تعاني من نفاد باقة الإنترنت بسرعة؟</h2>
+                <p>الحل هو تحميل <strong>متصفح Brave</strong>!</p>
+                <p>يمكنك إنشاء اختصارات لتطبيقات مثل فيسبوك على جميع أجهزتك وأنظمة التشغيل.</p>
+                <p>المتصفح يوفر ما بين <strong>30% إلى 50%</strong> من باقة الإنترنت عن طريق حظر الإعلانات والمتتبعات (Trackers) حتى على منصات مثل يوتيوب.</p>
+            </div>
+            
+            <div class="btn-wrapper">
+                <!-- زر التنزيل -->
+                <button class="btn btn-supreme" onclick="showPage('page_2')">للتنزيل</button>
+            </div>
+        </div>
+
+        <!-- ================= الصفحة الثانية ================= -->
+        <div id="page_2" class="page-section">
+            <button class="btn-back-luxury" onclick="showPage('page_1')">⬅ للرجوع</button>
+            <header>
+                <div class="logo-container" style="margin-bottom: 15px;">
+                    <img src="./0.png" alt="شعار Brave" style="width: 60px;">
+                </div>
+                <h1 style="font-size: 2rem;">Brave</h1>
+            </header>
+            <div class="content-wrapper">
+                <h2>اختر نظام التشغيل</h2>
+            </div>
+            
+            <div class="btn-wrapper">
+                <a href="https://play.google.com/store/apps/details?id=com.brave.browser" class="btn" target="_blank">
+                    <i class="fa-brands fa-android" style="color: #3DDC84;"></i> Android (أندرويد)
+                </a>
+                
+                <button class="btn" onclick="showPage('page_3')">
+                    <i class="fa-solid fa-computer" style="color: #a1a1aa;"></i> Computer (الكمبيوتر)
+                </button>
+                
+                <a href="https://apps.apple.com/us/app/brave-browser-search-engine/id1052879175" class="btn" target="_blank">
+                    <i class="fa-brands fa-apple" style="color: #fff;"></i> iOS (آيفون)
+                </a>
+            </div>
+        </div>
+
+        <!-- ================= الصفحة الثالثة ================= -->
+        <div id="page_3" class="page-section">
+            <button class="btn-back-luxury" onclick="showPage('page_2')">⬅ للرجوع</button>
+            <header>
+                <div class="logo-container" style="margin-bottom: 15px;">
+                    <img src="./0.png" alt="شعار Brave" style="width: 60px;">
+                </div>
+                <h1 style="font-size: 2rem;">Brave</h1>
+            </header>
+            <div class="content-wrapper">
+                <h2>تنزيل لأجهزة الكمبيوتر</h2>
+            </div>
+            
+            <div class="btn-wrapper">
+                <a href="https://brave.com/download/" class="btn" target="_blank">
+                    <i class="fa-brands fa-windows" style="color: #0078D6;"></i> Windows (ويندوز)
+                </a>
+                <a href="https://brave.com/download/" class="btn" target="_blank">
+                    <i class="fa-brands fa-apple" style="color: #fff;"></i> macOS (ماك)
+                </a>
+                <a href="https://brave.com/linux/" class="btn" target="_blank">
+                    <i class="fa-brands fa-linux" style="color: #E95420;"></i> Linux (لينكس)
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- كود الجافاسكريبت للتبديل -->
+    <script>
+        function showPage(pageId) {
+            const pages = document.querySelectorAll('.page-section');
+            
+            // إخفاء فوري
+            pages.forEach(page => {
+                page.classList.remove('active-page');
+            });
+            
+            // إظهار مع تشغيل الدخول السينمائي
+            setTimeout(() => {
+                document.getElementById(pageId).classList.add('active-page');
+            }, 20); // تأخير بسيط جداً لإعادة تفعيل الأنيميشن
+        }
+    </script>
+
+</body>
+</html>
